@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tweet Sentiment Analyzer</h2>
+    <form method="POST">
+        <input type="text" name="tweet" placeholder="Enter a tweet..." required>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if sentiment %}
+        <h3>Sentiment: {{ sentiment }}</h3>
+    {% endif %}
+</body>
+</html>
